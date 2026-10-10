@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== GREETING SECTION ===== -->
+  <section class="card" id="greeting-section">
+    <div id="datetime">
+      <span id="current-time"></span>
+      <span id="current-date"></span>
+    </div>
+    <h1 id="greeting-text"></h1>
+  </section>
+
+  <div class="grid-two">
+
+    <!-- ===== FOCUS TIMER SECTION ===== -->
+    <section class="card" id="timer-section">
+      <h2 class="section-title">⏱ Focus Timer</h2>
+      <div id="timer-display">25:00</div>
+      <div id="timer-label">Pomodoro Session</div>
+      <div id="timer-controls">
+        <button id="btn-start" class="btn btn-primary">Start</button>
+        <button id="btn-stop" class="btn btn-secondary">Stop</button>
+        <button id="btn-reset" class="btn btn-ghost">Reset</button>
+      </div>
+    </section>
+
+    <!-- ===== TO-DO LIST SECTION ===== -->
+    <section class="card" id="todo-section">
+      <h2 class="section-title">✅ To-Do List</h2>
+      <div id="todo-input-row">
+        <input type="text" id="todo-input" placeholder="Add a new task…" maxlength="120" />
+        <button id="btn-add-todo" class="btn btn-primary">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+      <p id="todo-empty" class="empty-msg">No tasks yet. Add one above!</p>
+    </section>
+
+  </div>
+
+  <!-- ===== QUICK LINKS SECTION ===== -->
+  <section class="card" id="links-section">
+    <h2 class="section-title">🔗 Quick Links</h2>
+    <div id="links-grid"></div>
+    <div id="link-input-row">
+      <input type="text" id="link-name-input" placeholder="Label (e.g. GitHub)" maxlength="30" />
+      <input type="url" id="link-url-input" placeholder="URL (e.g. https://github.com)" />
+      <button id="btn-add-link" class="btn btn-primary">Add Link</button>
+    </div>
+    <p id="links-empty" class="empty-msg">No links yet. Add your first one!</p>
+  </section>
+
+  <!-- ===== EDIT TASK MODAL ===== -->
+  <div id="edit-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <h3>Edit Task</h3>
+      <input type="text" id="edit-input" maxlength="120" />
+      <div class="modal-actions">
+        <button id="btn-save-edit" class="btn btn-primary">Save</button>
+        <button id="btn-cancel-edit" class="btn btn-ghost">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
